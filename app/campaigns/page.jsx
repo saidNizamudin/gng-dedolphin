@@ -17,10 +17,6 @@ import { useEffect } from "react";
 const Home = () => {
   const isTablet = useMediaQuery(950);
 
-  useEffect(() => {
-    console.log(isTablet);
-  }, [isTablet]);
-
   return (
     <div className="pb-20">
       <div className="flex items-center flex-wrap-reverse justify-between gap-3 gap-y-5 mb-10">
@@ -264,7 +260,10 @@ const Home = () => {
         {Array(5)
           .fill()
           .map((_, index) => (
-            <div className="flex items-center gap-5 border-2 border-black rounded-lg p-3">
+            <div
+              className="flex items-center gap-5 border-2 border-black rounded-lg p-3"
+              key={index}
+            >
               <span className="text-xl text-center font-semibold py-1 min-w-[30px] rounded-md bg-slate-300 ">
                 {index + 1}
               </span>
