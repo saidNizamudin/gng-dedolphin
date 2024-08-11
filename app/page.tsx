@@ -272,20 +272,83 @@ const Home = () => {
                   placeholder="Name"
                   className="w-[200px]"
                   classNames={{ label: styles.label }}
-                />
+                >
+                  {[
+                    {
+                      key: "John",
+                      label: "John",
+                    },
+                    {
+                      key: "Mina",
+                      label: "Mina",
+                    },
+                    {
+                      key: "Jalmar",
+                      label: "Jalmar",
+                    },
+                    {
+                      key: "Lina",
+                      label: "Lina",
+                    },
+                  ].map((status) => (
+                    <SelectItem key={status.key}>{status.label}</SelectItem>
+                  ))}
+                </Select>
                 <Select
                   variant={"underlined"}
                   placeholder="Location"
                   className="w-[200px]"
                   classNames={{ label: styles.label }}
-                />
+                >
+                  {[
+                    {
+                      key: "New York",
+                      label: "New York",
+                    },
+                    {
+                      key: "Paris",
+                      label: "Paris",
+                    },
+                    {
+                      key: "London",
+                      label: "London",
+                    },
+                    {
+                      key: "Berlin",
+                      label: "Berlin",
+                    },
+                  ].map((status) => (
+                    <SelectItem key={status.key}>{status.label}</SelectItem>
+                  ))}
+                </Select>
                 <Select
                   variant={"underlined"}
                   label="Type"
                   labelPlacement="outside-left"
                   className="w-[130px] items-center"
                   classNames={{ label: styles.label }}
-                />
+                >
+                  {[
+                    {
+                      key: "Ready",
+                      label: "Ready",
+                    },
+                    {
+                      key: "Processing",
+                      label: "Processing",
+                    },
+                    {
+                      key: "Done",
+                      label: "Done",
+                    },
+                    {
+                      key: "On Hold",
+                      label: "On Hold",
+                    },
+                  ].map((status) => (
+                    <SelectItem key={status.key}>{status.label}</SelectItem>
+                  ))}
+                </Select>
                 <Input
                   placeholder="Enter quantity"
                   labelPlacement="outside"
