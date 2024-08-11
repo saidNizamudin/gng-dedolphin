@@ -1,0 +1,76 @@
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.headerInput {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.headerGroup {
+  display: flex;
+  align-items: center;
+  border: 2px solid #191919;
+  border-radius: 5px;
+  padding: 4px 10px;
+  gap: 20px;
+}
+
+.headerGroup .headerValue,
+.headerGroup .label,
+.headerInfo .headerValue,
+.headerInfo .label {
+  text-align: end;
+}
+
+.inputValue,
+.headerGroup .headerValue,
+.headerInfo .headerValue {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.label,
+.baseDatePicker span {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  --tw-scale-x: 1 !important;
+  --tw-scale-y: 1 !important;
+  font-weight: 600 !important;
+  color: #7d7d7d !important;
+}
+
+.labelTranslate {
+  --tw-translate-y: -200% !important;
+}
+
+.input {
+  row-gap: 10px;
+}
+
+.headerStatus {
+  font-size: 14px;
+  font-weight: 600;
+  color: #089608;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.manualFormContainer {
+  display: grid;
+}

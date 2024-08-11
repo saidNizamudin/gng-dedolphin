@@ -1,11 +1,7 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
+"use client";
 
-import { siteConfig } from "@/config/site";
+import { Link, Code, Snippet, Button } from "@nextui-org/react";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -22,34 +18,21 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
+      <div className="flex flex-col items-center gap-2">
         <Snippet hideCopyButton hideSymbol variant="bordered">
           <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+            Get started by editing <Code color="primary">app/page.jsx</Code>
           </span>
         </Snippet>
+        <Button
+          href="/campaigns"
+          as={Link}
+          color="primary"
+          showAnchorIcon
+          variant="solid"
+        >
+          Go To Campaigns
+        </Button>
       </div>
     </section>
   );
